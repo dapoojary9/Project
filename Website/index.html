@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Dheeraj A Poojary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home"> <img src="assets/Logo.png" alt="logo"></a>
+      <button class="theme-toggle" type="button">☼</button>      
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li> 
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="dap section-pad">
+      <div class="container dap-grid">
+        <div class="dap-copy">
+          <p class="intro">Hello, It's Me</p>
+          <h1>Dheeraj A Poojary</h1>
+          <p class="lead">I am a creative web developer and designer focused on building clean, responsive, and modern websites.</p>
+          <div class="socials" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/dheeraj-p-428b393b6/" aria-label="LinkedIn" target="_blank"><img src="assets/LinkedIn.png" alt="Linkedin"></a>
+            <a href="https://www.instagram.com/hoonigan_dap/" aria-label="Instagram" target="_blank"><img src="assets/instagram.jpg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank"><img src="assets/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.x.com/" aria-label="X" target="_blank"><img src="assets/x.png" alt="X"></a>
+          </div>
+          <a class="btn" href="https://www.linkedin.com/in/dheeraj-p-428b393b6/">Download CV</a>
+        </div>
+        <div class="dap-image">
+          <img src="assets/ProfilePortrait.jpeg" alt="Profile portrait" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-pad">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/AboutProfile.jpeg" alt="About profile" />
+        </div>
+        <div class="about-copy">
+          <h2>About Me</h2>
+          <h3>Creative Designer and Developer</h3>
+          <p>I create visually appealing websites with a strong focus on usability, responsiveness, and polished presentation.</p>
+          <p>My work combines design thinking with practical development to deliver attractive digital experiences.</p>
+          <a class="btn" href="#certifications">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section-pad">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-list card">
+            <div class="skill-item"><span>Design</span><div class="bar"><span style="width:88%"></span></div></div>
+            <div class="skill-item"><span>HTML / CSS</span><div class="bar"><span style="width:78%"></span></div></div>
+            <div class="skill-item"><span>JavaScript</span><div class="bar"><span style="width:70%"></span></div></div>
+            <div class="skill-item"><span>C++</span><div class="bar"><span style="width:72%"></span></div></div> 
+            <div class="skill-item"><span>Data Structures & Algorithm</span><div class="bar"><span style="width:65%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="certifications section-pad">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="card-grid">
+          <article class="card certification-card">
+            <h4>Web Development</h4>
+            <p><img src="assets/WebDevelopment.jpg" alt=""></p>
+            <a class="btn" href="assets/WebDevelopment.jpg" target="_blank">View</a>
+          </article>
+          <article class="card certification-card">
+            <h4>Web Design</h4>
+            <p><img src="assets/WebDesign.jpg" alt=""></p>
+            <a class="btn" href="assets/WebDesign.jpg" target="_blank">View</a>
+          </article>
+          <article class="card certification-card">
+            <h4>Database</h4>
+            <p><img src="assets/Database.jpg" alt=""></p>
+            <a class="btn" href="assets/Database.jpg" target="_blank">View</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+     <section id="projects" class="projects section-pad">
+      <div class="container"> 
+        <h2>Latest Projects</h2> 
+        <div class="project-grid">
+          <article class="project card"><img src="assets/project1.jpg" alt="Project 1" /></article>
+          <article class="project card"><img src="assets/project2.jpg" alt="Project 2" /></article>
+          <article class="project card"><img src="assets/project3.jpg" alt="Project 3" /></article>
+          <article class="project card"><img src="assets/project4.jpg" alt="Project 4" /></article>
+          <article class="project card"><img src="assets/project5.jpg" alt="Project 5" /></article>
+          <article class="project card"><img src="assets/project6.jpg" alt="Project 6" /></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="contact section-pad alt-bg">
+      <div class="container contact-wrap">
+        <h2>Contact Me</h2>
+        <form class="contact-form card">
+          <div class="form-row">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="E-mail Address" />
+            <input type="tel" placeholder="Mobile Number" />
+          </div>
+          <textarea rows="7" placeholder="Write Your Query"></textarea> 
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-box">
+      <p>Dheeraj A Poojary</p>
+      <div class="socials footer-socials" aria-label="Social links footer">
+        <a href="https://www.whatsapp.com/" aria-label="WhatsApp" target="_blank"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.gmail.com/" aria-label="Email" target="_blank"><img src="assets/email.png" alt="E-mail"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

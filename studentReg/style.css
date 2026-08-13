@@ -1,0 +1,33 @@
+.header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+*{
+    box-sizing:border-box;
+    font-family:outfit, sans-serif;
+}
+
+.grid-2col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card{
+    background-color: antiquewhite;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.card h2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group{
+    margin: 20px;
+}
