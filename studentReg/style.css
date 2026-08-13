@@ -29,5 +29,17 @@
 }
 
 .form-group{
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+    background-color: rgb(236, 158, 41);
 }
