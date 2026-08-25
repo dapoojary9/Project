@@ -121,15 +121,10 @@ th, td {
 
 th {
     font-weight: 600;
-
     background-color: #f0d9b5;
 }
 
-
-/* =========================
-   COLUMN WIDTHS
-   ========================= */
-
+/*COLUMN WIDTHS*/
 th:nth-child(1),
 td:nth-child(1) {
     width: 20%;
@@ -156,31 +151,20 @@ td:nth-child(5) {
 }
 
 
-/* =========================
-   ACTION BUTTONS
-   ========================= */
-
+/*ACTION BUTTONS*/
 .edit-btn,
 .delete-btn {
     border: none;
-
     padding: 4px 6px;
-
     border-radius: 4px;
-
     cursor: pointer;
-
     font-size: 11px;
 }
 
-
 /* Edit */
-
 .edit-btn {
     background-color: #7dc2f0;
-
     color: rgb(0, 0, 0);
-
     margin-right: 2px;
 }
 
@@ -188,12 +172,9 @@ td:nth-child(5) {
     background-color: #5bb2ec;
 }
 
-
 /* Delete */
-
 .delete-btn {
     background-color: #f8978d;
-
     color: rgb(0, 0, 0);
 }
 
@@ -202,25 +183,15 @@ td:nth-child(5) {
 }
 
 
-/* =========================
-   EMPTY TABLE
-   ========================= */
-
+/*EMPTY TABLE*/
 .empty-message {
     text-align: center;
-
     padding: 15px;
-
     color: #777;
-
     font-size: 13px;
 }
 
-
-/* =========================
-   VERTICAL SCROLLBAR
-   ========================= */
-
+/*VERTICAL SCROLLBAR*/
 .table-container::-webkit-scrollbar {
     width: 7px;
 }
@@ -240,178 +211,46 @@ td:nth-child(5) {
 }
 
 
-/* =================================================
-   MOBILE
-   640px AND BELOW
-   ================================================= */
-
+/* Mobile */
 @media (max-width: 640px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .header {
-        font-size: 1.5rem;
-
-        margin-bottom: 15px;
-    }
-
-    /*
-       Stack cards vertically
-    */
-
-    .grid-2col {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .card h2 {
-        font-size: 1.2rem;
-
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        margin-bottom: 12px;
-    }
-
-    .form-group label {
-        font-size: 13px;
-    }
-
-    .form-group input {
-        padding: 8px;
-
-        font-size: 13px;
-    }
-
-    .btn {
-        width: 100%;
-
-        padding: 9px;
-
-        font-size: 13px;
-    }
-
-    /*
-       Small table font
-    */
-
-    table {
-        font-size: 10px;
-    }
-
-    th,
-    td {
-        padding: 6px 3px;
-    }
-
-    .edit-btn,
-    .delete-btn {
+    body { padding: 10px; }
+    .header { font-size: 1.5rem; }
+    .grid-2col { grid-template-columns: 1fr; gap: 15px; }
+    .card { padding: 15px; }
+    .card h2 { font-size: 1.2rem; }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { font-size: 13px; }
+    .form-group input { padding: 8px; font-size: 13px; }
+    .btn { width: 100%; padding: 9px; font-size: 13px; }
+    table { font-size: 10px; }
+    th, td { padding: 6px 3px; }
+    .edit-btn, .delete-btn {
         display: block;
-
         width: 100%;
-
         margin: 2px 0;
-
-        padding: 4px;
-
         font-size: 9px;
     }
 }
 
-
-/* =================================================
-   TABLET
-   641px - 1024px
-   ================================================= */
-
+/* Tablet */
 @media (min-width: 641px) and (max-width: 1024px) {
-
-    body {
-        padding: 15px;
-    }
-
-    .header {
-        font-size: 1.7rem;
-    }
-
-    .grid-2col {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-    }
-
-    .card {
-        padding: 17px;
-    }
-
-    .card h2 {
-        font-size: 1.3rem;
-    }
-
-    .form-group label {
-        font-size: 13px;
-    }
-
-    .form-group input {
-        padding: 8px;
-
-        font-size: 13px;
-    }
-
-    .btn {
-        padding: 8px 18px;
-
-        font-size: 13px;
-    }
-
-    table {
-        font-size: 11px;
-    }
-
-    th,
-    td {
-        padding: 7px 3px;
-    }
-
-    .edit-btn,
-    .delete-btn {
-        padding: 4px 5px;
-
-        font-size: 10px;
-    }
+    body { padding: 15px; }
+    .header { font-size: 1.7rem; }
+    .grid-2col { gap: 15px; }
+    .card { padding: 17px; }
+    .card h2 { font-size: 1.3rem; }
+    .form-group label { font-size: 13px; }
+    .form-group input { padding: 8px; font-size: 13px; }
+    .btn { padding: 8px 18px; font-size: 13px; }
+    table { font-size: 11px; }
+    th, td { padding: 7px 3px; }
+    .edit-btn, .delete-btn { font-size: 10px; }
 }
 
-
-/* =================================================
-   DESKTOP
-   1025px AND ABOVE
-   ================================================= */
-
+/* Desktop */
 @media (min-width: 1025px) {
-
-    body {
-        padding: 25px;
-    }
-
-    .grid-2col {
-        max-width: 1100px;
-
-        gap: 25px;
-    }
-
-    .card {
-        padding: 22px;
-    }
-
-    table {
-        font-size: 12px;
-    }
+    body { padding: 25px; }
+    .grid-2col { max-width: 1100px; gap: 25px; }
+    .card { padding: 22px; }
+    table { font-size: 12px; }
 }
