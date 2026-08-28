@@ -1,0 +1,50 @@
+
+/* Plain blue background for the whole page (no dynamic background) */
+body {
+  background-color: #1d4ed8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The two small buttons used for the C / F temperature toggle */
+.unit-btn {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* The unit that is currently selected */
+.unit-btn-active {
+  background-color: #ffffff;
+  color: #1e3a8a;
+}
+
+/* Inputs and buttons get a simple outline when focused (helps keyboard users) */
+input:focus,
+button:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
+}
+
+/* One forecast card */
+.forecast-card {
+  background-color: #1e3a8a;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Small rows inside a forecast card (temp / wind / humidity) */
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.forecast-row span:first-child {
+  color: #bfdbfe;
+}
