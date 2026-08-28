@@ -7,35 +7,56 @@
     <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <!-- container -->
 <body class="bg-blue-400 text-white min-h-screen">
     <div class="max-w-4xl mx-auto px-4 py-8">
-        <!-- heading -->
+
+<!-- Heading -->
         <header class="mb-6 text-center">
-            <h1 class="text-3xl font-bold">Weather Forecast</h1>
-            <p class="text-blue-200 mt-1">Check today's weather and the next 5 days</p>
+            <h1 class="text-3xl font-bold ">Weather Forecast</h1>
+            <p class="mt-1">Check today's weather and the next 5 days</p>
         </header>
-<!-- search box, search button and location button -->
-        <section class ="bg-white rounded-lg p-1 mb-6">
-            <div class = "sm:flex sm:items-center">
-                <input id = "cityInput" type = "text" placeholder = "Enter city name" class = "w-full sm:flex-1 px-3 py-1 rounded text-gray-800 mb-2 sm:mb-0 sm:mr-1">
-                <button id = "searchBtn" type = "button" class = "w-full sm:w-auto bg-blue-900 text-white font-semibold px-4 py-1 rounded mb-1 sm:mb-0 sm:mr-1">Search</button>
-                <button id = "locationBtn" type = "button" class = "w-full sm:w-auto bg-blue-900 text-white font-semibold px-4 py-1 rounded">My Location</button>
+
+<!-- Search & History Container Box -->
+        <section class="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-4 mb-6 shadow-lg">
+
+<!-- Search Controls -->
+            <div class="sm:flex sm:items-center">
+                <input id="cityInput" type="text" placeholder="Enter city name" class="w-full sm:flex-1 px-3 py-2 rounded bg-white text-gray-800 mb-2 sm:mb-0 sm:mr-2 focus:outline-none">
+                <button id="searchBtn" type="button" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded mb-2 sm:mb-0 sm:mr-2 transition">Search</button>
+                <button id="locationBtn" type="button" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition">My Location</button>
+            </div>
+
+ <!-- Error Box -->
+            <p id="errorBox" class="hidden mt-2 bg-red-600 text-white text-sm px-3 py-2 rounded"></p>
+
+<!-- History Box -->
+            <div id="historyBox" class="mt-1 pt-3 ">
+                <label for="historySelect" class="block text-sm text-blue-200 mb-1">Recently searched</label>
+                <div class="sm:flex sm:items-center">
+                    <select id="historySelect" class="w-full sm:flex-1 px-3 py-2 rounded bg-white text-gray-800 mb-2 sm:mb-0 sm:mr-2 focus:outline-none"></select>
+                    <button id="clearHistoryBtn" type="button" class="w-full sm:w-auto bg-blue-700 hover:bg-blue-800 text-white text-sm px-4 py-2 rounded transition">Clear</button>
+                </div>
             </div>
         </section>
-<!-- error box -->
-        <p id="errorBox" class="hidden mt-3 bg-red-600 text-white text-sm px-3 py-2 rounded"></p>
-<!-- loading weather data -->
-        <p id="loading" class="hidden text-center text-blue-200 mb-6">Loading Weather Data</p>
-<!-- today card -->
-        <section id="today" class="relative  bg-blue-800 rounded-lg p-5 mb-6">
+
+<!-- Loading weather data -->
+        <p id="loading" class="hidden text-center text-blue-200 mb-6">Loading Weather Data...</p>
+
+<!--Extreme temperature alert-->
+        <p id="tempAlert" class="hidden font-semibold px-4 py-3 rounded mb-6"></p>
+
+<!-- Today card -->
+        <section id="today" class="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-5 mb-6 shadow-lg">
             <div class="sm:flex sm:justify-between sm:items-start mb-4">
                 <div>
                     <h2 id="cityName" class="text-2xl font-bold"></h2>
                     <p id="dateText" class="text-blue-200 text-sm"></p>
                 </div>
             </div>
-<!-- weather icon temperature and condition -->
+
+<!-- Weather Icon, Temperature and Condition -->
             <div class="sm:flex sm:items-center mb-5">
                 <img id="weatherIcon" alt="weather icon" class="w-20 h-20">
                 <div class="sm:ml-3">
@@ -43,37 +64,41 @@
                     <p id="condition" class="capitalize text-blue-100"></p>
                 </div>
             </div>
-<!-- grid for hunidity, wind, feels like and pressure -->
-            <div class="grid grid-cols-2 sm:grid-cols gap-3 text-center">
-                <div class="bg-blue-900 rounded p-3">
+
+<!-- Grid for Humidity, Wind, Feels like, and Pressure -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div>
                     <p class="text-xs text-blue-300">Humidity</p>
                     <p id="humidity" class="font-semibold"></p>
                 </div>
-                <div class="bg-blue-900 rounded p-3">
+                <div>
                     <p class="text-xs text-blue-300">Wind Speed</p>
                     <p id="wind" class="font-semibold"></p>
                 </div>
-                <div class="bg-blue-900 rounded p-3">
+                <div>
                     <p class="text-xs text-blue-300">Feels Like</p>
                     <p id="feelsLike" class="font-semibold"></p>
                 </div>
-                <div class="bg-blue-900 rounded p-3">
+                <div>
                     <p class="text-xs text-blue-300">Pressure</p>
                     <p id="pressure" class="font-semibold"></p>
                 </div>
             </div>
-<!-- temperature switch button -->
+
+<!-- Temperature Switch Buttons -->
             <div class="absolute top-5 right-5 flex gap-1">
-                <button id="celciusBtn" type="button" class="unit-btn unit-btn-active">&deg C</button>
-                <button id="toFahrenheitBtn" type="button" class="unit-btn">&deg F</button>
+                <button id="celciusBtn" type="button" class="unit-btn unit-btn-active">&deg;C</button>
+                <button id="toFahrenheitBtn" type="button" class="unit-btn">&deg;F</button>
             </div>
         </section>
-        <section id="forecastSection" class="flex flex-col items-center text-center mx-auto w-full">
+
+<!-- Forecast Section -->
+        <section id="forecastSection" class=" flex flex-col items-center text-center mx-auto w-full">
             <h2 class="text-xl font-bold mb-3">5-Day Forecast</h2>
             <div id="forecastCards" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3"></div>
         </section>
     </div>
+
     <script src="script.js" defer></script>
 </body>
 </html>
-
