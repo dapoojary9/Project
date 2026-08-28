@@ -19,8 +19,8 @@
         <section class ="bg-white rounded-lg p-1 mb-6">
             <div class = "sm:flex sm:items-center">
                 <input id = "cityInput" type = "text" placeholder = "Enter city name" class = "w-full sm:flex-1 px-3 py-1 rounded text-gray-800 mb-2 sm:mb-0 sm:mr-1">
-                <button id = "searchBtn" type = "button" class = "w-full sm:w-auto bg-blue-500 text-white font-semibold px-4 py-1 rounded mb-1 sm:mb-0 sm:mr-1">Search</button>
-                <button id = "locationBtn" type = "button" class = "w-full sm:w-auto bg-blue-500 text-white font-semibold px-4 py-1 rounded">My Location</button>
+                <button id = "searchBtn" type = "button" class = "w-full sm:w-auto bg-blue-900 text-white font-semibold px-4 py-1 rounded mb-1 sm:mb-0 sm:mr-1">Search</button>
+                <button id = "locationBtn" type = "button" class = "w-full sm:w-auto bg-blue-900 text-white font-semibold px-4 py-1 rounded">My Location</button>
             </div>
         </section>
 <!-- error box -->
@@ -28,7 +28,7 @@
 <!-- loading weather data -->
         <p id="loading" class="hidden text-center text-blue-200 mb-6">Loading Weather Data</p>
 <!-- today card -->
-        <section id="today" class="bg-blue-800 rounded-lg p-5 mb-6">
+        <section id="today" class="relative  bg-blue-800 rounded-lg p-5 mb-6">
             <div class="sm:flex sm:justify-between sm:items-start mb-4">
                 <div>
                     <h2 id="cityName" class="text-2xl font-bold"></h2>
@@ -47,7 +47,7 @@
             <div class="grid grid-cols-2 sm:grid-cols gap-3 text-center">
                 <div class="bg-blue-900 rounded p-3">
                     <p class="text-xs text-blue-300">Humidity</p>
-                    <p id="Humidity" class="font-semibold"></p>
+                    <p id="humidity" class="font-semibold"></p>
                 </div>
                 <div class="bg-blue-900 rounded p-3">
                     <p class="text-xs text-blue-300">Wind Speed</p>
@@ -59,12 +59,21 @@
                 </div>
                 <div class="bg-blue-900 rounded p-3">
                     <p class="text-xs text-blue-300">Pressure</p>
-                    <p id="Pressure" class="font-semibold"></p>
+                    <p id="pressure" class="font-semibold"></p>
                 </div>
             </div>
+<!-- temperature switch button -->
+            <div class="absolute top-5 right-5 flex gap-1">
+                <button id="celciusBtn" type="button" class="unit-btn unit-btn-active">&deg C</button>
+                <button id="toFahrenheitBtn" type="button" class="unit-btn">&deg F</button>
+            </div>
+        </section>
+        <section id="forecastSection" class="flex flex-col items-center text-center mx-auto w-full">
+            <h2 class="text-xl font-bold mb-3">5-Day Forecast</h2>
+            <div id="forecastCards" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3"></div>
         </section>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
 
