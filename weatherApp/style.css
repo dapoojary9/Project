@@ -1,11 +1,5 @@
 
-/* Plain blue background for the whole page (no dynamic background) */
-body {
-  background-color: #1d4ed8;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* The two small buttons used for the C / F temperature toggle */
+/*C / F temperature toggle */
 .unit-btn {
   background-color: #1e3a8a;
   color: #ffffff;
@@ -22,17 +16,11 @@ body {
   color: #1e3a8a;
 }
 
-/* Inputs and buttons get a simple outline when focused (helps keyboard users) */
-input:focus,
-button:focus,
-select:focus {
-  outline: 2px solid #93c5fd;
-}
-
 /* One forecast card */
 .forecast-card {
-  background-color: #1e3a8a;
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 12px;
   padding: 12px;
   text-align: center;
 }
@@ -47,4 +35,11 @@ select:focus {
 
 .forecast-row span:first-child {
   color: #bfdbfe;
+}
+
+/* Inputs and buttons focus*/
+input:focus,
+button:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
 }
