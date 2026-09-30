@@ -1,0 +1,14 @@
+/* Sticky top bar */
+.header { position: sticky; top: 0; z-index: 10; background: var(--cobalt); color: #fff; }
+.header--placeholder { height: 60px; }
+.header__inner { max-width: 1180px; margin: 0 auto; padding: 0.8rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { font-size: 1.4rem; font-weight: 900; letter-spacing: -0.03em; text-decoration: none; }
+.nav { display: flex; align-items: center; gap: 1.25rem; }
+.nav a { text-decoration: none; padding: 0.15rem 0; border-bottom: 3px solid transparent; }
+.nav a:hover, .nav a.active { border-bottom-color: var(--sun); }
+
+/* Cart icon with item-count badge */
+.cart-link { position: relative; display: flex; }
+.cart-badge { position: absolute; top: -10px; right: -14px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px; background: var(--sun); color: var(--ink); font-size: 0.75rem; font-weight: 800; line-height: 20px; text-align: center; }
+
+@media (max-width: 480px) { .nav { gap: 0.9rem; } .brand { font-size: 1.2rem; } }
