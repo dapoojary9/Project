@@ -1,0 +1,56 @@
+/* ---------- Theme tokens ---------- */
+:root {
+  --paper: #f2f5f7;
+  --surface: #ffffff;
+  --ink: #101d2b;
+  --muted: #5b6b7b;
+  --line: #d5dde5;
+  --cobalt: #1c4ed8;
+  --cobalt-dark: #143aa6;
+  --sun: #ffc71f;
+  --danger: #b42318;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ---------- Reset & typography ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.55; }
+h1, h2, h3 { margin: 0 0 0.5rem; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+h2 { font-size: 1.15rem; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; margin: 0; padding: 0; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+/* ---------- Layout helpers ---------- */
+.container { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem; margin-bottom: 1.25rem; }
+.muted { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.tag { display: inline-block; font-size: 0.8rem; color: var(--cobalt); background: #e6ecfb; padding: 0.1rem 0.6rem; border-radius: 999px; }
+.price { font-weight: 800; font-size: 1.15rem; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-block; border: 2px solid var(--cobalt); background: var(--cobalt); color: #fff; font: inherit; font-weight: 700; padding: 0.45rem 1.1rem; border-radius: 999px; cursor: pointer; text-decoration: none; text-align: center; }
+.btn:hover:not(:disabled) { background: var(--cobalt-dark); border-color: var(--cobalt-dark); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn--ghost { background: transparent; color: var(--cobalt); }
+.btn--ghost:hover:not(:disabled) { background: #e6ecfb; color: var(--cobalt-dark); }
+.btn--lg { padding: 0.7rem 1.6rem; font-size: 1.05rem; }
+.btn--block { display: block; width: 100%; }
+
+/* ---------- Loading, errors, empty & 404 states ---------- */
+.loader { display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 3rem 1rem; color: var(--muted); }
+.spinner { width: 1.4rem; height: 1.4rem; border: 3px solid var(--line); border-top-color: var(--cobalt); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-box { background: #fff1f0; border: 1px solid #f4b8b3; border-left: 6px solid var(--danger); border-radius: 8px; padding: 1.25rem; margin: 1rem 0; }
+.error-box h2 { color: var(--danger); }
+.empty, .empty-state { text-align: center; color: var(--muted); padding: 3rem 1rem; }
+.empty-state h1 { color: var(--ink); }
+.not-found { max-width: 520px; margin: 2rem auto; text-align: center; }
+.not-found__code { font-size: clamp(4rem, 16vw, 7rem); font-weight: 900; line-height: 1; margin: 0; color: var(--cobalt); }
+.not-found__details { display: grid; grid-template-columns: auto 1fr; gap: 0.35rem 1rem; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; margin: 1.25rem 0; }
+.not-found__details dt { color: var(--muted); }
+.not-found__details dd { margin: 0; font-weight: 600; word-break: break-all; }
+
+@media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 3s; } }
