@@ -1,0 +1,11 @@
+/* Checkout form */
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem; }
+.field { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; }
+.field input, .field select { font: inherit; font-weight: 400; padding: 0.6rem 0.75rem; border: 2px solid var(--line); border-radius: 8px; background: #fff; }
+.field input:focus, .field select:focus { border-color: var(--cobalt); outline: none; }
+.field input:user-invalid { border-color: var(--danger); }
+.form .btn { grid-column: 1 / -1; justify-self: start; }
+
+/* Order summary list (card styles come from cart.css) */
+.summary__list { margin-bottom: 0.5rem; }
+.summary__list .summary__row { font-size: 0.95rem; }
