@@ -1,0 +1,30 @@
+/* ---------- Search ---------- */
+.search { width: min(100%, 340px); font: inherit; padding: 0.55rem 1rem; border: 2px solid var(--line); border-radius: 999px; background: var(--surface); }
+.search:focus { border-color: var(--cobalt); outline: none; }
+
+/* ---------- Product grid & cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
+.grid > li { display: flex; }
+.card { display: flex; flex-direction: column; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.card__media { display: block; aspect-ratio: 1; background: #e4ebf1; }
+.card__media img { width: 100%; height: 100%; object-fit: cover; }
+.card__body { display: flex; flex-direction: column; gap: 0.35rem; flex: 1; padding: 1rem; }
+.card__title { font-size: 1.05rem; margin: 0; }
+.card__title a { text-decoration: none; }
+.card__title a:hover { text-decoration: underline; }
+.card__foot { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: auto; padding-top: 0.75rem; }
+
+/* ---------- Product detail ---------- */
+.back-link { display: inline-block; margin-bottom: 1rem; color: var(--cobalt); font-weight: 600; }
+.detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.gallery__main { width: 100%; aspect-ratio: 1; object-fit: contain; background: #e4ebf1; border-radius: 10px; }
+.gallery__thumbs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.gallery__thumbs button { padding: 0; border: 2px solid var(--line); border-radius: 8px; background: #e4ebf1; cursor: pointer; overflow: hidden; }
+.gallery__thumbs button:hover { border-color: var(--cobalt); }
+.detail__info { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.detail__info h1, .detail__info p { margin: 0; }
+.price--lg { font-size: 1.9rem; }
+.price--lg small { font-size: 0.9rem; font-weight: 700; color: #08693f; background: #ddf5e8; padding: 0.1rem 0.5rem; border-radius: 6px; }
+.facts { color: var(--muted); }
+
+@media (max-width: 760px) { .detail { grid-template-columns: 1fr; gap: 1.25rem; } }
