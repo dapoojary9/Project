@@ -1,0 +1,47 @@
+/* ---------- Base ---------- */
+:root { --primary: #4f46e5; --bg: #f5f6fa; --text: #1f2937; --muted: #6b7280; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem 1.25rem; }
+h1, h2 { margin: 1rem 0 .6rem; }
+.muted { color: var(--muted); }
+
+/* ---------- Navbar ---------- */
+.navbar { background: var(--primary); color: #fff; position: sticky; top: 0; z-index: 10; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+.logo { font-weight: 700; font-size: 1.2rem; }
+.navbar nav a { color: #e0e7ff; text-decoration: none; margin-left: 1.2rem; padding-bottom: 3px; }
+.navbar nav a.active, .navbar nav a:hover { color: #fff; border-bottom: 2px solid #fff; }
+
+/* ---------- Hero ---------- */
+.hero { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; padding: 2.5rem 1.5rem; border-radius: 14px; text-align: center; }
+
+/* ---------- Chips (categories) ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: .8rem 0 1.2rem; }
+.chip { padding: .35rem .9rem; border-radius: 999px; background: #fff; border: 1px solid #d1d5db; color: var(--text); text-decoration: none; font-size: .9rem; }
+.chip:hover, .chip-active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ---------- Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.card, .panel { background: #fff; border-radius: 12px; padding: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.card { transition: transform .15s; }
+.card:hover { transform: translateY(-4px); }
+.card h3 { margin: .6rem 0 .2rem; }
+.badge { background: #e0e7ff; color: var(--primary); font-size: .75rem; padding: .15rem .6rem; border-radius: 999px; }
+.rating { font-weight: 600; }
+
+/* ---------- Buttons & inputs ---------- */
+.btn { display: inline-block; background: var(--primary); color: #fff; border: 0; padding: .55rem 1.1rem; border-radius: 8px; text-decoration: none; cursor: pointer; font-size: .95rem; margin-top: .5rem; }
+.btn:hover { background: #4338ca; }
+.input { width: 100%; padding: .6rem; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; }
+.search { margin-bottom: .8rem; }
+
+/* ---------- Form ---------- */
+.form { max-width: 600px; margin: 0 auto; }
+.field { margin-bottom: 1rem; display: flex; flex-direction: column; gap: .3rem; }
+.error { color: #dc2626; font-size: .85rem; }
+
+/* ---------- 404 ---------- */
+.notfound { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.notfound h1 { font-size: 6rem; margin: 0; color: var(--primary); }
+code { background: #e5e7eb; padding: .1rem .4rem; border-radius: 4px; }
